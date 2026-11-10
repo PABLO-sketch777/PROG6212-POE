@@ -1,0 +1,12 @@
+erDiagram
+ USERS ||--o{ EVENTS : organises
+ USERS ||--o{ ENROLLMENTS : makes
+ EVENTS ||--o{ CATEGORIES : defines
+ EVENTS ||--o{ ENROLLMENTS : receives
+ CATEGORIES ||--o{ ENROLLMENTS : selected
+ ENROLLMENTS ||--o| RESULTS : records
+ USERS { int Id PK string FullName string Email string PasswordHash string Role string Phone }
+ EVENTS { int Id PK string Name datetime EventDate string Location decimal DistanceKm string EventType int OrganiserId FK }
+ CATEGORIES { int Id PK int EventId FK string Name int MinimumAge int MaximumAge decimal DistanceKm }
+ ENROLLMENTS { int Id PK int EventId FK int ParticipantId FK int CategoryId FK datetime EnrolledAt }
+ RESULTS { int Id PK int EnrollmentId FK time FinishTime int FinishingPosition datetime RecordedAt }
