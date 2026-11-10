@@ -1,0 +1,1 @@
+using Microsoft.AspNetCore.Mvc; using RaceDay.Web.Services; namespace RaceDay.Web.Controllers; public class HomeController(ApiClient api):Controller{public async Task<IActionResult> Index()=>View(await api.Events());public async Task<IActionResult> Event(int id)=>View(await api.Event(id));}
