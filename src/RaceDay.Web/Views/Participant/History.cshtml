@@ -1,0 +1,2 @@
+@model List<EnrollmentModel>
+<h1>My race history</h1><table class="table"><thead><tr><th>Event</th><th>Category</th><th>Status</th><th>Finish</th></tr></thead><tbody>@foreach(var e in Model){<tr><td>@e.EventName</td><td>@e.CategoryName</td><td><span class="badge status-confirmed">Confirmed</span></td><td>@(e.FinishTime is null?"Awaiting results":$"{e.FinishTime} · position {e.FinishingPosition}")</td></tr>}</tbody></table>
