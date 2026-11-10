@@ -27,6 +27,7 @@ The MVC client should call this API only. It can use the event/banner URL return
 - Swagger: `/swagger`
 - Part 1 documents: `/docs`
 - CI workflow: `.github/workflows/ci.yml`
+- Latest successful CI run: https://github.com/PABLO-sketch777/PROG6212-POE/actions/runs/42890035760
 - YouTube demonstration: **Pending — to be added after final recording**
 - CI screenshot: **Pending — capture after pushing this repository to GitHub**
 
