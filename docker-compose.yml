@@ -1,0 +1,7 @@
+services:
+  raceday-web:
+    build: .
+    ports:
+      - "5090:8080"
+    environment:
+      ApiBaseUrl: http://host.docker.internal:5080/
