@@ -1,0 +1,12 @@
+using RaceDay.Api.Models;
+namespace RaceDay.Api.DTOs;
+public record RegisterRequest(string FullName,string Email,string Password,UserRole Role,string? Phone);
+public record LoginRequest(string Email,string Password);
+public record UserResponse(int Id,string FullName,string Email,UserRole Role,string? Phone,string? ProfileImageUrl);
+public record UpdateProfileRequest(string FullName,string? Phone);
+public record EventRequest(string Name,string Description,DateTime EventDate,string Location,decimal DistanceKm,EventType EventType,string? BannerImageUrl);
+public record EventResponse(int Id,string Name,string Description,DateTime EventDate,string Location,decimal DistanceKm,EventType EventType,string? BannerImageUrl,int OrganiserId);
+public record CategoryRequest(string Name,int? MinimumAge,int? MaximumAge,decimal? DistanceKm);
+public record EnrollmentRequest(int CategoryId);
+public record ResultRequest(TimeSpan FinishTime,int FinishingPosition);
+public record EnrollmentResponse(int Id,int EventId,int ParticipantId,int CategoryId,TimeSpan? FinishTime,int? FinishingPosition);
