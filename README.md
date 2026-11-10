@@ -23,6 +23,7 @@ Sessions use an HttpOnly cookie; Swagger requests must retain cookies between ca
 The MVC client should call this API only. It can use the event/banner URL returned by the API; Azure Blob upload logic belongs in the API layer, preserving the required separation of concerns.
 
 ## Evidence
+- Public GitHub repository: https://github.com/PABLO-sketch777/PROG6212-POE
 - Swagger: `/swagger`
 - Part 1 documents: `/docs`
 - CI workflow: `.github/workflows/ci.yml`
