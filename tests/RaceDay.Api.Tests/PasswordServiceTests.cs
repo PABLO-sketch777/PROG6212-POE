@@ -1,0 +1,2 @@
+using Xunit;
+using RaceDay.Api.Services; namespace RaceDay.Api.Tests; public class PasswordServiceTests{[Fact] public void HashesAreNotPlaintext(){var s=new PasswordService();var h=s.Hash("P@ssword1");Assert.NotEqual("P@ssword1",h);Assert.True(s.Verify("P@ssword1",h));Assert.False(s.Verify("wrong",h));}[Fact] public void DifferentHashesUseDifferentSalts(){var s=new PasswordService();Assert.NotEqual(s.Hash("same"),s.Hash("same"));}}
